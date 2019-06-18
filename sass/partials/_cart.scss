@@ -1,0 +1,129 @@
+.cart__dialog{
+      
+	td{
+		vertical-align: top;
+		border-bottom: 1px solid $grey;
+		padding-bottom: 1rem;
+		padding-top: 1rem;
+	}
+
+	a{
+		color: $text-color;
+	}
+
+	&-table{
+       border-collapse: collapse;
+       padding: 0;
+       margin: 0;
+       width: 100%;
+
+       &--expand{
+       	  width: 100000px;
+       	  padding-left: 1rem;
+       }
+	}
+
+	&-img{
+		display: inline-block;
+		width: 60px;
+    height: 60px;
+		background-color: $grey;
+
+		img{
+		   width: 100%;
+       height: 100%;
+		}
+	}
+
+	 .product-desc{
+       	  	font-size: $font-size-sm;
+       	  	font-weight: $font-weight-md;
+       	  	line-height: 0;
+       	  }
+
+     .product-price{
+         display: block;
+         font-size: ($font-size-sm * 1.3);
+         line-height: 1.7;
+       	 font-weight: $font-weight-md;
+       	 color: $black;
+     }
+
+     &-qty{
+     	>span{
+     		display: table-cell;
+     	}
+
+     	&--add,
+     	&--subtract{
+     		display: inline-block;
+     		width: 30px;
+     		height: 30px;
+     		border-radius: 100%; 
+     		border: 1px solid $grey;
+     		background-color: transparent;
+     		font-size: $font-size-md;
+     		cursor: pointer;
+
+     		&:hover,
+     		&:focus{
+     			outline: 0;
+     		}
+     	}
+
+     	&--input{
+     		width: 50px;
+     		height: 30px;
+     		border: 1px solid $grey;
+     		text-align: center;
+     		margin: 0 .5rem;
+     	}
+     }
+
+     &-delete{
+     	background-color: transparent;
+     	border: 0;
+     	color: #FD3119;
+     	font-size: ($font-size-md * 1.2);
+     	margin-left: 1.5rem;
+     	cursor: pointer;
+     	opacity: .8;
+
+     	&:hover,
+     	&:focus{
+     		opacity: 1;
+     		outline: 0;
+     	}
+     }
+
+   &-footer{
+     padding-top: .7rem;
+   }
+
+   &-charges{
+   	  padding: .6rem 0;
+   	  display: flex;
+   	  justify-content: space-between;
+
+   	 &--desc,
+   	 &--price{
+   	 	font-size: ($font-size-sm * 1.1);
+   	 	font-weight: $font-weight-md;
+   	 }
+
+   	 &--desc.total,
+   	 &--price.total{
+   	 	font-size: ($font-size-sm * 1.2);
+   	 	color: $heading-color;
+   	 }
+
+   }
+
+   &-checkout{
+   	 padding-top: .3rem;
+   	 
+   	 .btn{
+   	 	width: 100%;
+   	 }
+   }
+}

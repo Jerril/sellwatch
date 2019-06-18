@@ -1,0 +1,85 @@
+.product{
+    padding: 0  0 2rem 0;
+    position: relative;
+
+    &.border{
+	    	border-bottom: 0;
+	    	margin-bottom: 0;
+       }
+
+	&.no-border{
+	    	padding: ($spacing-x * 1.4) 0;
+	}
+    
+    >a {
+    	color: $text-color;
+
+    	&:hover{
+    		text-decoration: none;
+    	} 
+    }
+
+	&__image{
+		height: 12rem;
+		overflow: hidden;
+		border-radius: 1px;
+		position: relative;
+
+		img{
+		    position: absolute;
+		    top: 0;
+		    left: 50%;
+		    transform: translate(-50%, 0);
+		    width: auto;
+			height: 100%;
+		}
+	}
+
+	&__info{
+		text-align: center;
+
+		&-name{
+			font-weight: $font-weight-md;
+            font-size: $font-size-md * 0.8;
+            line-height: 1;
+		}
+
+		&-price{
+			font-size: $font-size-md * 0.85;
+			font-weight: $font-weight-md;
+			color: lighten($heading-color, 10%);
+			line-height: 1;
+		}
+
+		.strikethrough{
+			font-size: $font-size-md * 0.65;
+			font-weight: $font-weight-sm;
+			text-decoration: line-through;
+			padding-right: .5rem;
+			color: #F73D30;
+		}
+
+		.reviews{
+			margin: 1rem 0 0 0;
+			line-height: 1;
+
+			[class*="icon-"]{
+               color: $secondary;
+			}
+        }
+
+	}
+
+	@include lg{ 
+		padding: 0  ($spacing-x * 1.4) 2rem ($spacing-x * 1.4);
+		
+	    &.border{
+	    	border-bottom: 1px solid $grey;
+	    	margin-bottom: 4.5rem;
+	    }
+
+	    &.no-border{
+	    	padding: 0 ($spacing-x * 1.4);
+	    }
+	}
+}

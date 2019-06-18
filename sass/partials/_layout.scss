@@ -1,0 +1,74 @@
+/* 
+Global
+ */
+*{
+	box-sizing: border-box;
+}
+
+/* 
+container
+ */
+.container{
+	width: auto;
+	margin: 0 auto;
+	padding: 0 $spacing-y;
+}
+
+
+@include md{
+	.container{
+		width: 720px;
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+@include lg{
+	.container{
+		width: 960px;
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+@include xl{
+	.container{
+		width: 1240px;
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+/*
+grid 
+*/
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.row > *{
+	width: 100%;
+}
+
+@for $i from 1 through $grid-columns{
+	.sm-#{$i} {width: percentage($i/$grid-columns);}
+}
+
+@include md{
+	@for $i from 1 through $grid-columns{
+		.md-#{$i} {width: percentage($i/$grid-columns);}
+	}
+}
+
+@include lg{
+	@for $i from 1 through $grid-columns{
+		.lg-#{$i} {width: percentage($i/$grid-columns);}
+	}
+}
+
+@include xl{
+	@for $i from 1 through $grid-columns{
+		.xl-#{$i} {width: percentage($i/$grid-columns);}
+	}
+}

@@ -1,0 +1,53 @@
+/* 
+Media Query
+*/
+@mixin sm{
+   @media screen and (min-width: 567px){
+   	   @content;
+   }
+}
+
+@mixin md{
+   @media screen and (min-width: 768px){
+   	   @content;
+   }
+}
+
+@mixin lg{
+   @media screen and (min-width: 1024px){
+   	   @content;
+   }
+}
+
+@mixin xl{
+	@media screen and (min-width: 1280px){
+		@content;
+	}
+}
+
+@mixin button($bgColor, $color){
+   background-color: $bgColor;
+   color: $color;
+
+    &:hover{
+      background-color: lighten($bgColor, 2%);
+    }
+
+     &.outline{
+            background-color: transparent; 
+            border: 1px solid $bgColor;
+            color: $bgColor;
+
+              &:hover{
+                background-color: $bgColor;
+                color: $color;
+              }
+          }
+
+     &:disabled{
+        cursor: not-allowed;
+        background-color: $bgColor;
+        opacity: .5;
+
+     }
+}
